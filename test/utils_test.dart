@@ -32,19 +32,13 @@ final testManifest = {
 void main() {
   group('utils', () {
     test('configToManifest', () {
-      final manifest = {
-        'foo': 'bar',
-        'override': '1'
-      };
-      final config = {       
-        'name': 'test', 
-        'description': 'test description', 
-        'version': '1.1.1', 
+      final manifest = {'foo': 'bar', 'override': '1'};
+      final config = {
+        'name': 'test',
+        'description': 'test description',
+        'version': '1.1.1',
         'bar': 'foo',
-        'flutter_manifest': {
-          'theme_color': 'FFF',
-          'override': '2'
-        }
+        'flutter_manifest': {'theme_color': 'FFF', 'override': '2'}
       };
       final result = configToManifest(manifest, config);
       expect(result['name'], config['name']);

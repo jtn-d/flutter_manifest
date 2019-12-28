@@ -43,7 +43,8 @@ Map<String, Object> configToManifest(Map<String, Object> manifest, Map config) {
   manifest['description'] = config['description'];
   manifest['version'] = config['version'];
   if (config['flutter_manifest'] != null) {
-    for (MapEntry<dynamic, dynamic> entry in config['flutter_manifest'].entries) {
+    for (MapEntry<dynamic, dynamic> entry
+        in config['flutter_manifest'].entries) {
       manifest[entry.key] = entry.value;
     }
   }

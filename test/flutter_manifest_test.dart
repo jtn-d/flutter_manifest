@@ -12,11 +12,11 @@ void main() {
     setUpAll(() {
       TestWidgetsFlutterBinding.ensureInitialized();
       ServicesBinding.instance.defaultBinaryMessenger
-        .setMockMessageHandler('flutter/assets', (message) {
-          String key = utf8.decode(message.buffer.asUint8List());
-          var file = new File('../$key');
-          final Uint8List encoded = utf8.encoder.convert(file.readAsStringSync());
-          return Future.value(encoded.buffer.asByteData());
+          .setMockMessageHandler('flutter/assets', (message) {
+        String key = utf8.decode(message.buffer.asUint8List());
+        var file = new File('../$key');
+        final Uint8List encoded = utf8.encoder.convert(file.readAsStringSync());
+        return Future.value(encoded.buffer.asByteData());
       });
     });
     test('should read manifest as json', () async {
