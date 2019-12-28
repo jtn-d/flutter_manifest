@@ -1,0 +1,26 @@
+name: flutter_manifest
+description: Flutter package to manage Web App manifest.
+version: 0.0.1
+homepage: https://github.com/jtn-d/flutter_manifest.git
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+  flutter: ">=1.10.0 <2.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  yaml: ^2.1.15
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  assets:
+    - manifest.json
+
+flutter_manifest:
+  orientation: "portrait"
+  theme_color: "#F00"
+  background_color: "#000"
