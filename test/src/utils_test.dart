@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:flutter_manifest/utils.dart';
+import 'package:flutter_manifest/src/utils.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 final testManifest = {
@@ -31,7 +31,7 @@ final testManifest = {
 
 void main() {
   group('utils', () {
-    test('configToManifest', () {
+    test('convertConfigToManifest', () {
       final manifest = {'foo': 'bar', 'override': '1'};
       final config = {
         'name': 'test',
@@ -40,7 +40,7 @@ void main() {
         'bar': 'foo',
         'flutter_manifest': {'theme_color': 'FFF', 'override': '2'}
       };
-      final result = configToManifest(manifest, config);
+      final result = convertConfigToManifest(manifest, config);
       expect(result['name'], config['name']);
       expect(result['short_name'], config['name']);
       expect(result['description'], config['description']);
@@ -51,16 +51,16 @@ void main() {
       expect(result['bar'], isNull);
     });
 
-    test('saveManifestFile', () async {
+    test('writeJsonFile', () async {
       final path = 'test.json';
-      await saveManifestFile(path, testManifest);
+      await writeJsonFile(path, testManifest);
       final str = await File(path).readAsString();
       expect(json.decode(str), testManifest);
       await File(path).delete();
     });
 
-    test('loadConfigFile', () {
-      final config = loadConfigFile('../pubspec.yaml');
+    test('readYamlFile', () async {
+      final config = await readYamlFile('../pubspec.yaml');
       expect(config['name'], 'flutter_manifest');
     });
   });

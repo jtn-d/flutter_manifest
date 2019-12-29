@@ -3,7 +3,7 @@ library flutter_manifest;
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 
-import 'models/web_manifest.dart';
+import 'src/web_manifest.dart';
 
 /// Provides web manifest information. manifest.json file must be in assets.
 /// ```dart
