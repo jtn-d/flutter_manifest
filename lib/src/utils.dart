@@ -3,7 +3,8 @@ import 'dart:io';
 
 import 'package:yaml/yaml.dart';
 
-Map<String, Object> convertConfigToManifest(Map<String, Object> manifest, Map config) {
+Map<String, Object> convertConfigToManifest(
+    Map<String, Object> manifest, Map config) {
   manifest['name'] = config['name'];
   manifest['short_name'] = config['name'];
   manifest['description'] = config['description'];
