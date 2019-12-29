@@ -1,7 +1,7 @@
 name: flutter_manifest
 description: Flutter package to manage Web App manifest. Supports generating the manifest
   file and reading information from manifest.json in assets.
-version: 0.1.1
+version: 0.1.2
 homepage: https://github.com/jtn-d/flutter_manifest.git
 
 environment:

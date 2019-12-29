@@ -1,3 +1,7 @@
+## [0.1.2] - 29.12.2019
+
+* Add example
+
 ## [0.1.1] - 29.12.2019
 
 * Reorganize package
