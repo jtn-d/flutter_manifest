@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 
 import 'src/web_manifest.dart';
+export 'src/web_manifest.dart';
 
 /// Provides web manifest information. manifest.json file must be in assets.
 /// ```dart

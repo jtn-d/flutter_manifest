@@ -9,8 +9,8 @@ final _templateManifest = {
   "short_name": "HackerWeb",
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000",
-  "background_color": "#E3F2FD",
+  "theme_color": "#F00",
+  "background_color": "#FFF",
   "description": "A simply readable Hacker News app.",
   "version": "0.1.0",
   "icons": [
